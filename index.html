@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> SMWS </title>
+  <link rel="stylesheet" href="./style.css">
+
+  <meta charset="windows-1252">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <style>
+            
+             tr{cursor: pointer; transition: all .25s ease-in-out}
+            .selected{background-color: red; font-weight: bold; color: #fff;}
+            
+        </style>
+</head>
+<body>
+ 
+    <div class = "banner">
+         <h1><em><b><u>SMART WASTE MANAGEMENT SYSTEM</u></b></em></h1>
+         <marquee behavior="scroll" direction="left"  height = "250px" scrollamount="25" class = "marq"> <h2>  Project by: Ameya,Pratham,Abhishek,Sakshi</h2></marquee>
+         <img src ="gogreen.png"  / width = "10" class="logo" align = "right">
+         <img src ="download.png"  / width = "10" class="gg" align = "right">
+    </div>
+    
+    <div class = "content">
+        <h2><em><b>Garbage Level </b></em></h2>
+        <br>
+        <br>
+        <table class="center" id = "table">
+        <tr>
+            <th class="bin"> BIN </th>
+                 
+        </tr>
+            
+        <tr class = "full" id = "full">
+            <td>FULL! </td>
+            
+                 
+        </tr>
+        <tr class="warning">
+            <td>Warning </td>
+                 
+        </tr>
+        
+         <tr class="low">
+            <td>LOW </td>
+                 
+        </tr>
+   
+        </table>
+        
+        <script>
+            
+            function selectedRow(){
+                
+            var index,
+                table = document.getElementById("table");
+
+                for(var i = 1; i < 4; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+
+                        this.classList.toggle("selected");
+                        console.log(typeof index);
+                    };
+                }
+                
+            }
+            selectedRow();
+        </script>
+        <br>
+        <br>
+        <a href="data.html" class = "data"><b>Click here for Additional details</b></a>
+    </div>                           
+</body>
+    
